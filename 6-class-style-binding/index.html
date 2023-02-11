@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Class Style Binding</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="bgColor" />
+      <button @click="showBorder = !showBorder" class="btn">
+        Border Ekle / Ekleme
+      </button>
+      <br />
+      <br />
+      <button @click="redBG = !redBG" class="btn">redBG Ekle / Ekleme</button>
+      <div
+        class="box"
+        :style="{backgroundColor: bgColor}"
+        :class="boxClasses"
+      ></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
